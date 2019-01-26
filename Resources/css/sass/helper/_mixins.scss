@@ -1,0 +1,27 @@
+
+
+@mixin flex{
+display: -webkit-box; 
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex; 
+display: flex;
+}
+@mixin transition{
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+@mixin transform{
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+@mixin grid {
+    display: -ms-grid;
+    display: grid;
+}
