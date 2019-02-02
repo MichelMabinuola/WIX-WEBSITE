@@ -270,6 +270,7 @@ $(document).ready(() => {
             $wrapperIpad.on('click', () => {
                 if ($wrapperIpad.hasClass('wrap')) {
                     $wrapperIpad.removeClass('wrap').addClass('remove');
+                    
                     console.log('clicked')
 
                     TweenMax.set($('section'), {

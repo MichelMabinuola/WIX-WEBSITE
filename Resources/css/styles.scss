@@ -334,7 +334,7 @@ body {
 
     @media screen and (max-width: $break-ipad) {
         display: block;
-        z-index: 14;
+        z-index: 999;
     }
 
     .bar1,
@@ -435,6 +435,8 @@ body {
         width: 60%;
         font-size: 16px;
         cursor: pointer;
+        outline: none;
+        border: 1px solid;
 
 
         @media screen and (max-width: $break-phone3) {

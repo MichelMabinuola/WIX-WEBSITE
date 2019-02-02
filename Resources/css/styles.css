@@ -236,7 +236,7 @@ body {
   @media screen and (max-width: 970px) {
     .wrapper--ipad {
       display: block;
-      z-index: 14; } }
+      z-index: 999; } }
   .wrapper--ipad .bar1,
   .wrapper--ipad .bar2,
   .wrapper--ipad .bar3 {
@@ -309,7 +309,9 @@ body {
     height: 40px;
     width: 60%;
     font-size: 16px;
-    cursor: pointer; }
+    cursor: pointer;
+    outline: none;
+    border: 1px solid; }
     @media screen and (max-width: 664px) {
       .button button {
         width: 60px;
