@@ -28,7 +28,6 @@ body {
     left: 0;
     z-index: 3;
 
-
     header {
         width: $width;
 
@@ -41,18 +40,15 @@ body {
             height: 84px;
             align-items: center;
             -moz-align-items: center;
-            
             box-sizing: border-box;
             @include flex;
             flex-wrap: $flexWrap;
             -ms-flex-wrap: $flexWrap;
-            @media screen and (max-width: $break-desktop3){
+
+            @media screen and (max-width: $break-desktop3) {
                 width: 90%;
             }
 
-            @media screen and (max-width: $break-ipad) {
-                display: none;
-            }
 
 
             nav {
@@ -156,30 +152,28 @@ body {
 
 
 
-.cover--wrapper.block {
-    @media screen and (max-width: $break-ipad){
+.cover--wrapper{
+    @media screen and (max-width: $break-ipad) {
         height: 100%;
-        z-index: 8;
-        background-color: #f9f9f9;
         overflow: hidden;
+        
     }
-    
+
     header {
         @media screen and (max-width: $break-ipad) {
-            margin-top: 10px;
-            width: $width;
-            height: 100%;
+            margin-top: 0;      
         }
 
-        .cover--nav.display {
-
+        .cover--nav{
             @media screen and (max-width: $break-ipad) {
                 position: relative;
-                margin-top: 80px;
-                display: block;
+                margin-top: 30px;
+                 display: none;
+                overflow: hidden;
+                height: 100%;
+                
             }
 
-            //z-index: 12;
 
             nav {
                 @media screen and (max-width: $break-ipad) {
@@ -207,7 +201,7 @@ body {
 
                     }
 
-                    .subscribe.navigation {
+                    .subscribe{
                         @media screen and (max-width: $break-ipad) {
                             text-align: left;
                             padding: 0;
@@ -224,8 +218,8 @@ body {
                             }
                         }
 
-                        a.drop,
-                        .drop-btn.drop {
+                        a,
+                        .drop-btn {
                             @media screen and (max-width: $break-ipad) {
                                 margin: 0;
                                 text-align: left;
@@ -235,7 +229,7 @@ body {
                             }
                         }
 
-                        .dropdown-content.contents {
+                        .dropdown-content{
                             @media screen and (max-width: $break-ipad) {
                                 position: relative;
                                 line-height: 2em;
@@ -249,7 +243,6 @@ body {
 
                             a {
                                 @media screen and (max-width: $break-ipad) {
-                                    //padding: 12px 16px;
                                     text-decoration: none;
                                 }
 
@@ -306,10 +299,12 @@ body {
     //background-color: aqua;
     .logo-svg {
         width: 10%;
-        @media screen and (max-width: $break-desktop3){
+
+        @media screen and (max-width: $break-desktop3) {
             margin-top: 16px;
         }
-        @media screen and (max-width: $break-ipad){
+
+        @media screen and (max-width: $break-ipad) {
             margin-top: 0;
             width: 100px;
         }
@@ -337,36 +332,37 @@ body {
         z-index: 999;
     }
 
-    .bar1,
-    .bar2,
-    .bar3 {
-        width: 35px;
-        height: 3px;
-        background-color: #000;
-        margin: 5px 0;
-        transition: 0.4s;
+}
 
-        /* menu change. Class toggling; */
-        .bar2 {
-            width: 25px;
-        }
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+    transition: 0.4s;
 
-        .bar3 {
-            width: 20px;
-        }
-
-        .bar1:hover {
-            width: 20px;
-        }
-
-        .bar2:hover,
-        .bar3:hover {
-            width: 35px;
-        }
-
-
-
+    /* menu change. Class toggling; */
+    .bar2 {
+        width: 25px;
     }
+
+    .bar3 {
+        width: 20px;
+    }
+
+    .bar1:hover {
+        width: 20px;
+    }
+
+    .bar2:hover,
+    .bar3:hover {
+        width: 35px;
+    }
+
+
+
 }
 
 .remove .bar1,
@@ -867,9 +863,11 @@ section {
         display: inline-block;
         width: 40%;
         text-align: left;
-        @media screen and (max-width: $break-ipad){
+
+        @media screen and (max-width: $break-ipad) {
             width: 42%;
         }
+
         @media screen and (max-width: $break-phone3) {
             text-align: center;
         }
@@ -885,7 +883,7 @@ section {
                 margin: 0 auto;
                 width: 85%;
             }
-           
+
             &:hover {
 
                 color: #f9f9f9;
@@ -1168,7 +1166,7 @@ a {
     @media screen and (max-width: $break-phone3) {
         height: auto;
         padding-top: 30px;
-    
+
     }
 }
 
@@ -1189,7 +1187,7 @@ a {
             height: auto;
             text-align: center;
             font-size: 12px;
-            
+
 
         }
 

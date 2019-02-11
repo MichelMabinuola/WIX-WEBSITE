@@ -39,9 +39,6 @@ body {
       @media screen and (max-width: 1060px) {
         .cover--wrapper header .cover--nav {
           width: 90%; } }
-      @media screen and (max-width: 970px) {
-        .cover--wrapper header .cover--nav {
-          display: none; } }
       .cover--wrapper header .cover--nav nav {
         width: 80%;
         text-align: center; }
@@ -121,27 +118,25 @@ body {
         width: 20%; }
 
 @media screen and (max-width: 970px) {
-  .cover--wrapper.block {
+  .cover--wrapper {
     height: 100%;
-    z-index: 8;
-    background-color: #f9f9f9;
     overflow: hidden; } }
 @media screen and (max-width: 970px) {
-  .cover--wrapper.block header {
-    margin-top: 10px;
-    width: 100%;
+  .cover--wrapper header {
+    margin-top: 0; } }
+@media screen and (max-width: 970px) {
+  .cover--wrapper header .cover--nav {
+    position: relative;
+    margin-top: 30px;
+    display: none;
+    overflow: hidden;
     height: 100%; } }
 @media screen and (max-width: 970px) {
-  .cover--wrapper.block header .cover--nav.display {
-    position: relative;
-    margin-top: 80px;
-    display: block; } }
-@media screen and (max-width: 970px) {
-  .cover--wrapper.block header .cover--nav.display nav {
+  .cover--wrapper header .cover--nav nav {
     width: 100%;
     text-align: left; } }
 @media screen and (max-width: 970px) {
-  .cover--wrapper.block header .cover--nav.display nav ul {
+  .cover--wrapper header .cover--nav nav ul {
     list-style: none;
     font-size: 20px;
     line-height: 2em;
@@ -149,29 +144,29 @@ body {
     padding: 0;
     padding-left: 30px; } }
 @media screen and (max-width: 970px) {
-  .cover--wrapper.block header .cover--nav.display nav ul li {
+  .cover--wrapper header .cover--nav nav ul li {
     width: 100%;
     text-align: left;
     margin: 20px 0; } }
 @media screen and (max-width: 970px) {
-  .cover--wrapper.block header .cover--nav.display nav ul .subscribe.navigation {
+  .cover--wrapper header .cover--nav nav ul .subscribe {
     text-align: left;
     padding: 0;
     position: relative;
     bottom: 0; } }
 @media screen and (max-width: 970px) {
-  .cover--wrapper.block header .cover--nav.display nav ul .subscribe.navigation .fas {
+  .cover--wrapper header .cover--nav nav ul .subscribe .fas {
     display: none; } }
 @media screen and (max-width: 970px) {
-  .cover--wrapper.block header .cover--nav.display nav ul .subscribe.navigation a.drop,
-  .cover--wrapper.block header .cover--nav.display nav ul .subscribe.navigation .drop-btn.drop {
+  .cover--wrapper header .cover--nav nav ul .subscribe a,
+  .cover--wrapper header .cover--nav nav ul .subscribe .drop-btn {
     margin: 0;
     text-align: left;
     display: block;
     padding: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
 @media screen and (max-width: 970px) {
-  .cover--wrapper.block header .cover--nav.display nav ul .subscribe.navigation .dropdown-content.contents {
+  .cover--wrapper header .cover--nav nav ul .subscribe .dropdown-content {
     position: relative;
     line-height: 2em;
     background-color: inherit;
@@ -180,15 +175,15 @@ body {
     border-radius: none;
     display: block; } }
 @media screen and (max-width: 970px) {
-  .cover--wrapper.block header .cover--nav.display nav ul .subscribe.navigation .dropdown-content.contents a {
+  .cover--wrapper header .cover--nav nav ul .subscribe .dropdown-content a {
     text-decoration: none; } }
 @media screen and (max-width: 970px) {
-  .cover--wrapper.block header .cover--nav.display .button {
+  .cover--wrapper header .cover--nav .button {
     padding-left: 30px;
     margin: 0;
     text-align: left; } }
 @media screen and (max-width: 970px) {
-  .cover--wrapper.block header .cover--nav.display .button button {
+  .cover--wrapper header .cover--nav .button button {
     width: 160px;
     height: 50px;
     font-size: 18px; } }
@@ -237,34 +232,35 @@ body {
     .wrapper--ipad {
       display: block;
       z-index: 999; } }
-  .wrapper--ipad .bar1,
-  .wrapper--ipad .bar2,
-  .wrapper--ipad .bar3 {
-    width: 35px;
-    height: 3px;
-    background-color: #000;
-    margin: 5px 0;
-    transition: 0.4s;
-    /* menu change. Class toggling; */ }
-    .wrapper--ipad .bar1 .bar2,
-    .wrapper--ipad .bar2 .bar2,
-    .wrapper--ipad .bar3 .bar2 {
-      width: 25px; }
-    .wrapper--ipad .bar1 .bar3,
-    .wrapper--ipad .bar2 .bar3,
-    .wrapper--ipad .bar3 .bar3 {
-      width: 20px; }
-    .wrapper--ipad .bar1 .bar1:hover,
-    .wrapper--ipad .bar2 .bar1:hover,
-    .wrapper--ipad .bar3 .bar1:hover {
-      width: 20px; }
-    .wrapper--ipad .bar1 .bar2:hover,
-    .wrapper--ipad .bar1 .bar3:hover,
-    .wrapper--ipad .bar2 .bar2:hover,
-    .wrapper--ipad .bar2 .bar3:hover,
-    .wrapper--ipad .bar3 .bar2:hover,
-    .wrapper--ipad .bar3 .bar3:hover {
-      width: 35px; }
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px 0;
+  transition: 0.4s;
+  /* menu change. Class toggling; */ }
+  .bar1 .bar2,
+  .bar2 .bar2,
+  .bar3 .bar2 {
+    width: 25px; }
+  .bar1 .bar3,
+  .bar2 .bar3,
+  .bar3 .bar3 {
+    width: 20px; }
+  .bar1 .bar1:hover,
+  .bar2 .bar1:hover,
+  .bar3 .bar1:hover {
+    width: 20px; }
+  .bar1 .bar2:hover,
+  .bar1 .bar3:hover,
+  .bar2 .bar2:hover,
+  .bar2 .bar3:hover,
+  .bar3 .bar2:hover,
+  .bar3 .bar3:hover {
+    width: 35px; }
 
 .remove .bar1,
 .remove .bar2,

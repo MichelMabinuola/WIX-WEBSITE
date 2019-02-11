@@ -251,9 +251,51 @@ $(document).ready(() => {
 
 
     /*****************************HARMBURGER MENU CLICK BUTTON *****************/
-    
-    
 
+    let $wrapperIpad = $('.wrapper--ipad'),
+        $allContents = $('.cover--wrapper'),
+        $coverNav = $('.cover--nav');
+
+    TweenMax.set($allContents, {
+        display: 'block'
+    });
+    $wrapperIpad.on('click', () => {
+        if ($wrapperIpad.hasClass('wrap')) {
+            $wrapperIpad.removeClass('wrap').addClass('remove');
+            TweenMax.set($('section'), {
+                display: 'none'
+            })
+            TweenMax.set($allContents, {
+                backgroundColor: '#ffffff'
+            })
+            TweenMax.set($coverNav, {
+                display: 'block'
+            });
+            TweenMax.from($coverNav, 0.5, {
+                y: -400, opacity: 0
+            })
+
+
+        } else if ($wrapperIpad.hasClass('remove')) {
+            $wrapperIpad.removeClass('remove').addClass('wrap')
+            TweenMax.set($('section'), {
+                display: ''
+            })
+
+            TweenMax.set($allContents, {
+                backgroundColor: 'none'
+            })
+            TweenMax.set($coverNav, {
+                display: ''
+            });
+            
+            TweenMax.from($coverNav, 0.5, {
+                y: 0
+            })
+        }
+    })
+
+    /*
     let $wrapperIpad = $('.wrapper--ipad'),
         $allContents = $('.cover--wrapper');
 
@@ -317,6 +359,9 @@ $(document).ready(() => {
 
 
                 }
+                
+                return false;
+                
             })
 
 
@@ -341,7 +386,7 @@ $(document).ready(() => {
     }
    
 
-    
+    */
 
 
 
